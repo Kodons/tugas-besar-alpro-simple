@@ -144,6 +144,14 @@ public class SKopi {
         System.out.print("Harga       : ");
         int hargaMenu = input.nextInt();
 
+        for (Menu menu : daftarMenu) {
+            if (menu.namaMenu.equalsIgnoreCase(namaMenu)) {
+                System.out.println("Menu sudah tersedia.");
+                next();
+                return;
+            }
+        }
+
         daftarMenu.add(new Menu(namaMenu, hargaMenu));
         System.out.println("Menu berhasil ditambahkan.");
 
@@ -229,6 +237,7 @@ public class SKopi {
             }
         }
         next();
+        menuAdmin();
     }
 
     public static int hitungTotalPembelian(ArrayList<Menu> totalPembelian) {
