@@ -213,7 +213,7 @@ public class SKopi {
         } while (input.next().equalsIgnoreCase("y"));
 
         if (!pesanan.isEmpty()) {
-            riwayatPembelian.add(new History(currentUsername, pesanan)); // Simpan riwayat pembelian
+            riwayatPembelian.add(new History(currentUsername, pesanan));
             System.out.println("\nMenu yang dibeli: ");
             for (Menu menu : pesanan) {
                 System.out.println(menu);
